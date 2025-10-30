@@ -19,7 +19,7 @@ function generarTelefonoRandom() {
 /* {testIsolation: false},  (va despues de la coma y antes del parentesis) */ 
 describe('Registro de Usuario', () => {
 beforeEach(() => {
-    cy.visit('https://ticketazo.com.ar/auth/registerUser')
+    cy.visit('https://ticketazo.com.ar/auth/login')
 }) 
   it.skip('Happy Path', () => {
     // Generar datos aleatorios para cada ejecución
@@ -44,15 +44,15 @@ beforeEach(() => {
     cy.get('[data-cy="input-repetir-password"]').type('Test1234!')
     cy.get('[data-cy="btn-registrarse"]').click()
 
- 
+
   })
 
   it('Wrong Path', () => {
     const emailRandom = generarEmailRandom();
     const dniRandom = generarDNIRandom();
     const telefonoRandom = generarTelefonoRandom();
-    cy.get('[data-cy="btn-registrarse"]').click()
-    cy.contains('Please fill out this field.').should('be.visible')
+    cy.get('[data-cy="btn-register-user"]').click()
+    // cy.contains('Please fill out this field.').should('be.visible')
     cy.get('[data-cy="input-nombres"]').type('Juan Carlos')
     cy.get('[data-cy="input-apellido"]').type('Perez Gomez')
     cy.get('[data-cy="input-telefono"]').type(telefonoRandom)

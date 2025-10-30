@@ -1,0 +1,2 @@
+Aserciones -> son verificaciones que confirman que el comportamiento de una aplicacion es el esperado durante los test. Son el corazon de cualquer prueba automatiazada, ya que permiten validar los resultados obtenidos frente a los resultados esperados.
+
