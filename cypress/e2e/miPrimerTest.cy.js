@@ -52,7 +52,7 @@ beforeEach(() => {
     const dniRandom = generarDNIRandom();
     const telefonoRandom = generarTelefonoRandom();
     cy.get('[data-cy="btn-registrarse"]').click()
-    cy.contains('Please fill out this field.').should('be.visible')
+    cy.contains('Completa este campo').should('be.visible')
     cy.get('[data-cy="input-nombres"]').type('Juan Carlos')
     cy.get('[data-cy="input-apellido"]').type('Perez Gomez')
     cy.get('[data-cy="input-telefono"]').type(telefonoRandom)
