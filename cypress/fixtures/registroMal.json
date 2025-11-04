@@ -1,0 +1,12 @@
+{
+  "nombres": "",
+  "apellido": "",
+  "telefono": "123",            
+  "dni": "1234567",             
+  "provincia": "Córdoba",
+  "localidad": "Santa Rosa de Calamuchita",
+  "fechaNacimiento": "14/01/1997",
+  "email": "correo-no-valido",  
+  "password": "123",
+  "repetirPassword": "321"
+}

@@ -1,0 +1,14 @@
+{
+  "nombres": "Juan Carlos",
+  "apellido": "Perez Gomez",
+  "provincia": "Córdoba",
+  "localidad": "Santa Rosa de Calamuchita",
+  "fechaNacimiento": {
+    "day": "14",
+    "month": "01",
+    "year": "1997"
+  },
+  "password": "Test1234!",
+  "repetirPassword": "Test1234!",
+  "emailExistente": "facundopasqua@gmail.com"
+}

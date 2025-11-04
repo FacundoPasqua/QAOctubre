@@ -29,20 +29,17 @@ Cypress.Commands.add('loginWrongPath',()=>{
     cy.log('Ingresando sin credenciales')
     cy.get('[data-cy="btn-login"]').click()
     cy.get('p').contains('Correo o contraseña incorrectos').should('be.visible')
-
-    cy.log('Mail incorrecto')
-    cy.get('[data-cy="input-email"]').type('homejo5153filipx.com')
-    cy.get('[data-cy="input-password"]').focus()
-
-    cy.get('div[data-slot="error-message"]')
-    .invoke('text')
-    .should('match', /Incluye un signo "@"|Please include an '@'/)
-
-
-    cy.log('Contraseña incorrecta')
-    cy.get('[data-cy="input-email"]').clear().type('homejo5153@filipx.com')
-    cy.get('[data-cy="input-password"]').clear().type('Admin123s4*')
-    cy.get('p').contains('Correo o contraseña incorrectos').should('be.visible')    
+    cy.fixture('registroMal').then((data)=>{
+        cy.get('[data-cy="input-email"]').type(data.email)
+        
+         cy.get('[data-cy="input-password"]').focus()
+         cy.get('div[data-slot="error-message"]')
+         .invoke('text')
+         .should('match', /Incluye un signo "@"|Please include an '@'/)
+        cy.get('[data-cy="input-password"]').type(data.password)
+        cy.get('p').contains('Correo o contraseña incorrectos').should('be.visible')    
+    })
+    
 })
 
 Cypress.Commands.add('buttons',()=>{

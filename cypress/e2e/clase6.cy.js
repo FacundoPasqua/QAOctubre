@@ -15,7 +15,7 @@ describe('Clase 6',()=>{
         cy.loginHappyPath('homejo5153@filipx.com','Admin1234*')
     })
 
-    it.only('Login - Multiple users',()=>{
+    it('Login - Multiple users',()=>{
         const usuarios = [ // Arreglo
             { email: 'homejo5153@filipx.com', pass: 'Admin1234*'}, // Objeto
             { email: 'demo@local.com', pass: 'Panifa41' }
